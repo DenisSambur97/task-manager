@@ -1,0 +1,81 @@
+.filters {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+
+    input,
+    select {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.filters input[type="text"], .filters select {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filters select {
+  padding: 8px 20px;
+  background-color: #fff;
+}
+
+.filters input[type="text"]::placeholder, .filters select option {
+  color: #999;
+}
+
+.filters input[type="text"]:focus, .filters select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.filters select {
+  cursor: pointer;
+}
+
+.filters button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filters button:hover {
+  background-color: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button:not(:disabled):hover {
+  background-color: #0056b3;
+}
